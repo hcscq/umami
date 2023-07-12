@@ -6,6 +6,10 @@ WORKDIR /app
 COPY package.json yarn.lock ./
 # Add yarn timeout to handle slow CPU when Github Actions
 RUN yarn config set network-timeout 300000
+
+RUN yarn config set registry https://registry.npm.taobao.org
+RUN yarn config set disturl https://npm.taobao.org/dist
+
 RUN yarn install --frozen-lockfile
 
 # Rebuild the source code only when needed
