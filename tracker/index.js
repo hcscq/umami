@@ -57,6 +57,7 @@
     title,
     url: currentUrl,
     referrer: currentRef,
+    uname: window.localStorage.getItem('uname')
   });
 
   /* Tracking functions */
