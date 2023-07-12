@@ -8,7 +8,6 @@ COPY package.json yarn.lock ./
 RUN yarn config set network-timeout 300000
 
 RUN yarn config set registry https://registry.npm.taobao.org
-RUN yarn config set disturl https://npm.taobao.org/dist
 
 RUN yarn install --frozen-lockfile
 
